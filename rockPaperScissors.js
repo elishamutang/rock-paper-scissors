@@ -1,7 +1,7 @@
 // getComputerChoice is working
 function getComputerChoice() {
-    let choices = ["Rock", "Paper", "Scissors"];
-    let randomChoice = choices[Math.floor(Math.random() * choices.length)];
+    const choices = ["Rock", "Paper", "Scissors"];
+    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
     return randomChoice;
 } 
 
