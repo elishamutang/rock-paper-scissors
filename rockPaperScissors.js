@@ -42,4 +42,10 @@ function gameRound(playerSelection, computerSelection) {
 
 }
 
+function game() {
+    gameRound();
+}
+
+
+
 console.log(gameRound());
