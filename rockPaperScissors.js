@@ -5,8 +5,6 @@ function getComputerChoice() {
     return randomChoice;
 } 
 
-console.log(getComputerChoice());
-
 function gameRound(playerSelection, computerSelection) {
     playerSelection = prompt("Rock, paper or Scissors?");
     computerSelection = getComputerChoice();
