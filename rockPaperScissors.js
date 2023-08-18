@@ -8,8 +8,9 @@ function getComputerChoice() {
 function gameRound(playerSelection, computerSelection) {
 
     // Convert inputs to lowercase to in order to compare (i.e case-insensitive)
-    playerSelection = playerSelection.toLowerCase();
-    computerSelection = computerSelection.toLowerCase();
+    // playerSelection = playerSelection.toLowerCase();
+    // computerSelection = computerSelection.toLowerCase();
+    console.log(playerSelection, computerSelection);
 
     if (playerSelection == computerSelection) {
         return "It's a Tie!";
@@ -42,33 +43,46 @@ function game() {
     let userScore = 0;
     let compScore = 0;
     
-    // Keeps track of each round
-    for(round = 1; round < 6; round++) {
-        let playerChoice = prompt("Rock, paper or scissors?");
+    
+    let playerChoice = prompt("Rock, paper or scissors?");
+    let computerChoice = getComputerChoice();
 
-        let result = gameRound(playerChoice, computerChoice);
+    // Convert inputs to lowercase to in order to compare (i.e case-insensitive)
+    playerChoice = playerChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();
 
-        if (result == "You win!") {
-            userScore++;
-            console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-        } else if (result == "Computer wins") {
-            compScore++;
-            console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-        } else if (result == "It's a Tie!") {
-            console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+    if (playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors") {
+
+        // Keeps track of each round
+        for(round = 1; round < 6; round++) {
+            let playerChoice = prompt("Rock, paper or scissors?");
+            playerChoice = playerChoice.toLowerCase();
+
+            let result = gameRound(playerChoice, computerChoice);
+
+            if (result == "You win!") {
+                userScore++;
+                console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+            } else if (result == "Computer wins") {
+                compScore++;
+                console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+            } else if (result == "It's a Tie!") {
+                console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+            }
         }
-    }
 
-    // Announces the winner after game ends
-    if(userScore > compScore) {
-        return "You beat the computer!";
-    } else if(compScore > userScore) {
-        return "Computer beats you!";
+        // Announces the winner after game ends
+        if(userScore > compScore) {
+            return "You beat the computer!";
+        } else if(compScore > userScore) {
+            return "Computer beats you!";
+        } else {
+            return "It's a tie! No one wins!";
+        }
     } else {
-        return "It's a tie! No one wins!";
+        console.log(`You entered ${playerChoice}. Please try again.`);
+        game();
     }
 }
 
-
-const computerChoice = getComputerChoice();
-console.log(game());
+game();
