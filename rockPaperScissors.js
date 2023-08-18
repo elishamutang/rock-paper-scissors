@@ -6,15 +6,10 @@ function getComputerChoice() {
 } 
 
 function gameRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Rock, paper or Scissors?");
-    computerSelection = getComputerChoice();
 
-    // Convert inputs to lowercase to compare
+    // Convert inputs to lowercase to in order to compare (i.e case-insensitive)
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
-
-    // Display both selection
-    console.log(`You: ${playerSelection} \nComputer: ${computerSelection}`);
 
     if (playerSelection == computerSelection) {
         return "It's a Tie!";
@@ -43,9 +38,37 @@ function gameRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    gameRound();
+
+    let userScore = 0;
+    let compScore = 0;
+    
+    // Keeps track of each round
+    for(round = 1; round < 6; round++) {
+        let playerChoice = prompt("Rock, paper or scissors?");
+
+        let result = gameRound(playerChoice, computerChoice);
+
+        if (result == "You win!") {
+            userScore++;
+            console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+        } else if (result == "Computer wins") {
+            compScore++;
+            console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+        } else if (result == "It's a Tie!") {
+            console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+        }
+    }
+
+    // Announces the winner after game ends
+    if(userScore > compScore) {
+        return "You beat the computer!";
+    } else if(compScore > userScore) {
+        return "Computer beats you!";
+    } else {
+        return "It's a tie! No one wins!";
+    }
 }
 
 
-
-console.log(gameRound());
+const computerChoice = getComputerChoice();
+console.log(game());
