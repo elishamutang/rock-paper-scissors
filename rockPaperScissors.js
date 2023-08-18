@@ -51,6 +51,12 @@ function game() {
         playerChoice = playerChoice.toLowerCase();
         computerChoice = computerChoice.toLowerCase();
 
+        // Think about code where users enter invalid input
+
+
+
+        
+
         let result = gameRound(playerChoice, computerChoice);
 
         if (result == "You win!") {
