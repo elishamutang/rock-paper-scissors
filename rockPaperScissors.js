@@ -58,17 +58,17 @@ function game() {
 
             playerChoice = playerChoice.toLowerCase();
             computerChoice = computerChoice.toLowerCase();
-
+            
             let result = gameRound(playerChoice, computerChoice);
 
             if (result == "You win!") {
                 userScore++;
-                console.log(`\n\n${result}\n\n\nRound:${round}Your score: ${userScore}\nComputer score: ${compScore}`);
+                console.log(`\n\n${result}\n\n\nRound:${round}\nYour score: ${userScore}\nComputer score: ${compScore}`);
             } else if (result == "Computer wins") {
                 compScore++;
-                console.log(`\n\n${result}\n\n\nRound:${round}Your score: ${userScore}\nComputer score: ${compScore}`);
+                console.log(`\n\n${result}\n\n\nRound:${round}\nYour score: ${userScore}\nComputer score: ${compScore}`);
             } else if (result == "It's a Tie!") {
-                console.log(`\n\n${result}\n\n\nRound:${round}Your score: ${userScore}\nComputer score: ${compScore}`);
+                console.log(`\n\n${result}\n\n\nRound:${round}\nYour score: ${userScore}\nComputer score: ${compScore}`);
             }
         }
 
@@ -80,9 +80,10 @@ function game() {
         } else {
             return "Game over: It's a tie! No one wins!";
         }
+    }
 
     // User to re-enter correct choices based on initial instructions
-    } else {
+    else {
         console.log(`You entered ${playerChoice}. Please try again.`);
         console.log(game());
     }
