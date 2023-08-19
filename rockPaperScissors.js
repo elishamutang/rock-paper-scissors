@@ -76,8 +76,8 @@ function game() {
 
     } else {
         console.log(`You entered ${playerChoice}. Please try again.`);
-        game();
+        console.log(game());
     }
 }
 
-game();
+console.log(game());
