@@ -40,13 +40,13 @@ function game() {
 
     let userScore = 0;
     let compScore = 0;
-
     let playerChoice = prompt("Rock, paper or scissors?");
     let computerChoice;
 
     // Convert inputs to lowercase to in order to compare (i.e case-insensitive)
     playerChoice = playerChoice.toLowerCase();
 
+    // Validates user input at the start
     if (playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors") {
 
         alert("Round starts now! Please re-enter your first choice");
@@ -81,6 +81,7 @@ function game() {
             return "Game over: It's a tie! No one wins!";
         }
 
+    // User to re-enter correct choices based on initial instructions
     } else {
         console.log(`You entered ${playerChoice}. Please try again.`);
         console.log(game());
