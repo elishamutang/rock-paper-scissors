@@ -47,6 +47,8 @@ function game() {
 
     if (playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors") {
 
+        alert("Round starts now! Please re-enter your first choice");
+
         // Keeps track of each round
         for(round = 1; round < 6; round++) {
             let playerChoice = prompt("Rock, paper or scissors?");
