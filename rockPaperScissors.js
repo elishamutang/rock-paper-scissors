@@ -42,11 +42,10 @@ function game() {
     let compScore = 0;
 
     let playerChoice = prompt("Rock, paper or scissors?");
-    let computerChoice = getComputerChoice();
+    let computerChoice;
 
     // Convert inputs to lowercase to in order to compare (i.e case-insensitive)
     playerChoice = playerChoice.toLowerCase();
-    computerChoice = computerChoice.toLowerCase();
 
     if (playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors") {
 
@@ -54,8 +53,11 @@ function game() {
 
         // Keeps track of each round
         for(round = 1; round < 6; round++) {
-            let playerChoice = prompt("Rock, paper or scissors?");
+            playerChoice = prompt("Rock, paper or scissors?");
+            computerChoice = getComputerChoice();
+
             playerChoice = playerChoice.toLowerCase();
+            computerChoice = computerChoice.toLowerCase();
 
             let result = gameRound(playerChoice, computerChoice);
 
@@ -72,11 +74,11 @@ function game() {
 
         // Announces the winner after game ends
         if(userScore > compScore) {
-            return "You beat the computer!";
+            return "Game over: You beat the computer!";
         } else if(compScore > userScore) {
-            return "Computer beats you!";
+            return "Game over: Computer beats you!";
         } else {
-            return "It's a tie! No one wins!";
+            return "Game over: It's a tie! No one wins!";
         }
 
     } else {
