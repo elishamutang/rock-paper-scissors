@@ -63,12 +63,12 @@ function game() {
 
             if (result == "You win!") {
                 userScore++;
-                console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+                console.log(`\n\n${result}\n\n\nRound:${round}Your score: ${userScore}\nComputer score: ${compScore}`);
             } else if (result == "Computer wins") {
                 compScore++;
-                console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+                console.log(`\n\n${result}\n\n\nRound:${round}Your score: ${userScore}\nComputer score: ${compScore}`);
             } else if (result == "It's a Tie!") {
-                console.log(`Round:${round}\n\n${result}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+                console.log(`\n\n${result}\n\n\nRound:${round}Your score: ${userScore}\nComputer score: ${compScore}`);
             }
         }
 
