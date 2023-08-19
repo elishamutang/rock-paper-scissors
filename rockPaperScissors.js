@@ -8,7 +8,7 @@ function getComputerChoice() {
 function gameRound(playerSelection, computerSelection) {
 
     // Visualize user input vs computer choice
-    console.log(`${playerSelection} : ${computerSelection}`);
+    console.log(`[Your pick] ${playerSelection} vs ${computerSelection} [Computer pick]`);
 
     if (playerSelection == computerSelection) {
         return "It's a Tie!";
