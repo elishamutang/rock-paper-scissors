@@ -86,8 +86,10 @@ choices.forEach(function(choice) {
     document.body.appendChild(button);
 })
 
+// Targets all buttons
 const buttons = document.querySelectorAll("BUTTON");
 
+// Adds event listener to each button
 buttons.forEach(function(button) {
     button.addEventListener("click", () => {
         console.log(button.id);
