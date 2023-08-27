@@ -36,11 +36,11 @@ function game() {
 
     let userScore = 0;
     let compScore = 0;
-    let computerChoice;
 
     // Keeps track of each round
     for(let round = 1; round < 6; round++) {
-        computerChoice = getComputerChoice();
+        let computerChoice = getComputerChoice();
+        let playerChoice = document.getElementById("#Rock");
 
         playerChoice = playerChoice.toLowerCase();
         computerChoice = computerChoice.toLowerCase();
@@ -86,17 +86,13 @@ choices.forEach(function(choice) {
     document.body.appendChild(button);
 })
 
-document.getElementById("Rock").addEventListener("click", () => {
-    console.log("Rock");
-});
+const buttons = document.querySelectorAll("BUTTON");
 
-document.getElementById("Paper").addEventListener("click", () => {
-    console.log("Paper");
-});
-
-document.getElementById("Scissors").addEventListener("click", () => {
-    console.log("Scissors");
-});
+buttons.forEach(function(button) {
+    button.addEventListener("click", () => {
+        console.log(button.id);
+    })
+})
 
 
 
