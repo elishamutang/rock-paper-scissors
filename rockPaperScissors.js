@@ -85,7 +85,7 @@ function game() {
     // User to re-enter correct choices based on initial instructions
     else {
         console.log(`You entered ${playerChoice}. Please try again.`);
-        console.log(game());
+        return game();
     }
 }
 
