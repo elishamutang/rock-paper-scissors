@@ -86,4 +86,18 @@ choices.forEach(function(choice) {
     document.body.appendChild(button);
 })
 
+document.getElementById("Rock").addEventListener("click", () => {
+    console.log("Rock");
+});
+
+document.getElementById("Paper").addEventListener("click", () => {
+    console.log("Paper");
+});
+
+document.getElementById("Scissors").addEventListener("click", () => {
+    console.log("Scissors");
+});
+
+
+
 
