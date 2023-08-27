@@ -1,6 +1,5 @@
 // Computer chooses at random
 function getComputerChoice() {
-    const choices = ["Rock", "Paper", "Scissors"];
     const randomChoice = choices[Math.floor(Math.random() * choices.length)];
     return randomChoice;
 } 
@@ -30,10 +29,7 @@ function gameRound(playerSelection, computerSelection) {
         } else if (computerSelection == "paper") {
             return "You win!";
         }
-    } else {
-        return "Invalid entry";
     }
-
 }
 
 function game() {
@@ -42,10 +38,9 @@ function game() {
     let compScore = 0;
     let computerChoice;
 
+
     // Validates user input at the start
     if (playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors") {
-
-        alert("Round starts now! Please re-enter your first choice");
 
         // Keeps track of each round
         for(round = 1; round < 6; round++) {
@@ -79,4 +74,16 @@ function game() {
 
 }
 
-console.log(game());
+const choices = ["Rock", "Paper", "Scissors"];
+
+// Loops through each choice in choices and creates a button. Alternatively, a for loop can be used.
+choices.forEach(function(choice) {
+    let button = document.createElement("BUTTON");
+    let buttonText = document.createTextNode(choice);
+    button.setAttribute("class", "playerChoice");
+    button.setAttribute("id", choice);
+    button.appendChild(buttonText);
+    document.body.appendChild(button);
+})
+
+
