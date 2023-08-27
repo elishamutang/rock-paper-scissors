@@ -38,38 +38,33 @@ function game() {
     let compScore = 0;
     let computerChoice;
 
+    // Keeps track of each round
+    for(round = 1; round < 6; round++) {
+        computerChoice = getComputerChoice();
 
-    // Validates user input at the start
-    if (playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors") {
+        playerChoice = playerChoice.toLowerCase();
+        computerChoice = computerChoice.toLowerCase();
+        
+        let result = gameRound(playerChoice, computerChoice);
 
-        // Keeps track of each round
-        for(round = 1; round < 6; round++) {
-            computerChoice = getComputerChoice();
-
-            playerChoice = playerChoice.toLowerCase();
-            computerChoice = computerChoice.toLowerCase();
-            
-            let result = gameRound(playerChoice, computerChoice);
-
-            if (result == "You win!") {
-                userScore++;
-                console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-            } else if (result == "Computer wins") {
-                compScore++;
-                console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-            } else if (result == "It's a Tie!") {
-                console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-            }
+        if (result == "You win!") {
+            userScore++;
+            console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+        } else if (result == "Computer wins") {
+            compScore++;
+            console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+        } else if (result == "It's a Tie!") {
+            console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
         }
+    }
 
-        // Announces the winner after game ends
-        if(userScore > compScore) {
-            return "Game over: You beat the computer!";
-        } else if(compScore > userScore) {
-            return "Game over: Computer beats you!";
-        } else {
-            return "Game over: It's a tie! No one wins!";
-        }
+    // Announces the winner after game ends
+    if(userScore > compScore) {
+        return "Game over: You beat the computer!";
+    } else if(compScore > userScore) {
+        return "Game over: Computer beats you!";
+    } else {
+        return "Game over: It's a tie! No one wins!";
     }
 
 }
