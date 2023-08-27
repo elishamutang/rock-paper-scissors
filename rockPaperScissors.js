@@ -40,11 +40,7 @@ function game() {
 
     let userScore = 0;
     let compScore = 0;
-    let playerChoice = prompt("Rock, paper or scissors?");
     let computerChoice;
-
-    // Convert inputs to lowercase to in order to compare (i.e case-insensitive)
-    playerChoice = playerChoice.toLowerCase();
 
     // Validates user input at the start
     if (playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors") {
@@ -53,7 +49,6 @@ function game() {
 
         // Keeps track of each round
         for(round = 1; round < 6; round++) {
-            playerChoice = prompt("Rock, paper or scissors?");
             computerChoice = getComputerChoice();
 
             playerChoice = playerChoice.toLowerCase();
@@ -82,11 +77,6 @@ function game() {
         }
     }
 
-    // User to re-enter correct choices based on initial instructions
-    else {
-        console.log(`You entered ${playerChoice}. Please try again.`);
-        return game();
-    }
 }
 
 console.log(game());
