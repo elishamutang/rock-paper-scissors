@@ -74,6 +74,8 @@ function game() {
 
 }
 
+// New code below using DOM manipulation
+
 const choices = ["Rock", "Paper", "Scissors"];
 
 // Loops through each choice in choices and creates a button. Alternatively, a for loop can be used.
