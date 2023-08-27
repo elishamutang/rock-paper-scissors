@@ -32,34 +32,30 @@ function gameRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+function game(e) {
 
     let userScore = 0;
     let compScore = 0;
 
-    // Keeps track of each round
-    for(let round = 1; round < 6; round++) {
-        let computerChoice = getComputerChoice();
-        let playerChoice = document.getElementById("#Rock");
+    let computerChoice = getComputerChoice();
+    const playerChoice = document.querySelector(`button[id="${e.textContent}"]`); // Fix this
 
-        playerChoice = playerChoice.toLowerCase();
-        computerChoice = computerChoice.toLowerCase();
-        
-        let result = gameRound(playerChoice, computerChoice);
+    console.log(playerChoice);
+    
+    playerChoice = playerChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();
+    
+    let result = gameRound(playerChoice, computerChoice);
 
-        if (result == "You win!") {
-            userScore++;
-            console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-        } else if (result == "Computer wins") {
-            compScore++;
-            console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-        } else if (result == "It's a Tie!") {
-            console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-        }
+    if (result == "You win!") {
+        userScore++;
+        console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+    } else if (result == "Computer wins") {
+        compScore++;
+        console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+    } else if (result == "It's a Tie!") {
+        console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
     }
-
-    console.log(`UserScore: ${userScore}`);
-    console.log(`CompScore: ${compScore}`);
 
     // Announces the winner after game ends
     if(userScore > compScore) {
@@ -92,8 +88,9 @@ const buttons = document.querySelectorAll("BUTTON");
 // Adds event listener to each button
 buttons.forEach(function(button) {
     button.addEventListener("click", () => {
-        console.log(button.id);
+        console.log(button.textContent);
     })
+    button.addEventListener("click", game);
 })
 
 
