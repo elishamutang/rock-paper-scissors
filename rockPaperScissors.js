@@ -38,7 +38,7 @@ function game(e) {
     let compScore = 0;
 
     let computerChoice = getComputerChoice();
-    const playerChoice = document.querySelector(`button[id="${e.textContent}"]`); // Fix this
+    const playerChoice = document.querySelectorAll("BUTTON"); // Fix this
 
     console.log(playerChoice);
     
@@ -87,8 +87,8 @@ const buttons = document.querySelectorAll("BUTTON");
 
 // Adds event listener to each button
 buttons.forEach(function(button) {
-    button.addEventListener("click", () => {
-        console.log(button.textContent);
+    button.addEventListener("click", (e) => {
+        console.log(e.target.textContent);
     })
     button.addEventListener("click", game);
 })
