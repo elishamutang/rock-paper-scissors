@@ -39,7 +39,7 @@ function game() {
     let computerChoice;
 
     // Keeps track of each round
-    for(round = 1; round < 6; round++) {
+    for(let round = 1; round < 6; round++) {
         computerChoice = getComputerChoice();
 
         playerChoice = playerChoice.toLowerCase();
@@ -57,6 +57,9 @@ function game() {
             console.log(`\n\n${result}\n\n\nRound:${round}\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
         }
     }
+
+    console.log(`UserScore: ${userScore}`);
+    console.log(`CompScore: ${compScore}`);
 
     // Announces the winner after game ends
     if(userScore > compScore) {
