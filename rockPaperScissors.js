@@ -32,14 +32,15 @@ function gameRound(playerSelection, computerSelection) {
     }
 }
 
-function game(e) {
+function game() {
 
     let userScore = 0;
     let compScore = 0;
 
     let computerChoice = getComputerChoice();
-    const playerChoice = document.querySelectorAll("BUTTON"); // Fix this
+    const playerChoice = buttons;
 
+    console.log(e.target.textContent);
     console.log(playerChoice);
     
     playerChoice = playerChoice.toLowerCase();
@@ -73,14 +74,14 @@ function game(e) {
 const choices = ["Rock", "Paper", "Scissors"];
 
 // Loops through each choice in choices and creates a button. Alternatively, a for loop can be used.
-choices.forEach(function(choice) {
-    let button = document.createElement("BUTTON");
-    let buttonText = document.createTextNode(choice);
-    button.setAttribute("class", "playerChoice");
-    button.setAttribute("id", choice);
-    button.appendChild(buttonText);
-    document.body.appendChild(button);
-})
+// choices.forEach(function(choice) {
+//     let button = document.createElement("BUTTON");
+//     let buttonText = document.createTextNode(choice);
+//     button.setAttribute("class", "playerChoice");
+//     button.setAttribute("id", choice);
+//     button.appendChild(buttonText);
+//     document.body.appendChild(button);
+// })
 
 // Targets all buttons
 const buttons = document.querySelectorAll("BUTTON");
