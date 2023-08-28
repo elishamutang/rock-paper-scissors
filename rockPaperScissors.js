@@ -38,9 +38,8 @@ function game() {
     let compScore = 0;
 
     let computerChoice = getComputerChoice();
-    const playerChoice = buttons;
+    const playerChoice = Array.from(buttons); // Fix this!
 
-    console.log(e.target.textContent);
     console.log(playerChoice);
     
     playerChoice = playerChoice.toLowerCase();
