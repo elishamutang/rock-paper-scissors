@@ -6,6 +6,7 @@ body {
     width: 100%;
     margin: auto;
     flex: 0;
+    border: 2px solid red;
 }
 
 #selection {
@@ -19,6 +20,14 @@ body {
     border: 2px solid black;
     flex-shrink: 0;
     flex-wrap: wrap;
+}
+
+#scoreboard {
+    border: 2px solid red;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
 }
 
 .items {
