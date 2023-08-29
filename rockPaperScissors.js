@@ -49,11 +49,14 @@ function game(e) {
 
     // Target scoreboard div
     let scores = document.getElementById("scoreboard");
+    // Creates running score
+    let scoreText = document.createElement("h2");
 
     if(userScore < 5 && compScore < 5) {
         if (result == "You win!") {
             userScore++;
-            console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+            // scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
+            // scores.appendChild(scoreText);
         } else if (result == "Computer wins") {
             compScore++;
             console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
@@ -62,11 +65,11 @@ function game(e) {
         }
     } else {
         if(userScore > compScore) {
-            console.log(`"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}"`);
-            console.log("You beat the computer!");
+            scoreText.textContent = `"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}\n\nYou beat the machine!"`;
+            scores.appendChild(scoreText);
         } else {
-            console.log(`"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}"`);
-            console.log("Computer beats you!");
+            scoreText.textContent = `"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}\n\nMachine beats you!"`;
+            scores.appendChild(scoreText);
         }
         userScore = 0;
         compScore = 0;
