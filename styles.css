@@ -6,7 +6,7 @@ body {
     width: 1000px;
     margin: auto;
     flex: 0;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #selection {
@@ -40,10 +40,6 @@ body {
     font-size: 16px;
 }
 
-#heading2, #title {
-    margin: 20px auto;
-}
-
 #scoreboard h2 {
     color: black;
     font-size: 32px;
@@ -51,25 +47,30 @@ body {
 }
 
 #header {
-    border: 2px solid black;
-    width: 600px;
+    border: 10px double blueviolet;
+    border-radius: 5px;
+    width: 500px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 20px auto;
-    border-radius: 10px;
     padding: 20px;
-    background-color: seagreen;
+    /* background-color: seagreen; */
 }
 
 #title {
-    /* border: 2px solid red; */
     margin: 0;
     align-self: center;
-    font-size: 40px;
+    font-size: 35px;
+    color: blueviolet;
+}
+
+#heading2 {
+    margin: 30px auto auto auto;
+    font-size: 50px;
 }
 
 img {
-    width: 100px;
+    width: 85px;
     /* border: 2px solid red; */
 }
