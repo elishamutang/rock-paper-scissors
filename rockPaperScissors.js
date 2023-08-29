@@ -33,7 +33,7 @@ function gameRound(playerSelection, computerSelection) {
     }
 }
 
-// Game
+// Runs a single game round
 function game(e) {
 
     // User & comp choices
