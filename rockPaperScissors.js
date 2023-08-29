@@ -55,8 +55,8 @@ function game(e) {
     if(userScore < 5 && compScore < 5) {
         if (result == "You win!") {
             userScore++;
-            // scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
-            // scores.appendChild(scoreText);
+            scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
+            scores.appendChild(scoreText);
         } else if (result == "Computer wins") {
             compScore++;
             console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
