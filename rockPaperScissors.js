@@ -71,19 +71,19 @@ function game(e) {
     }
 }
 
+// Player and computer score initialization
 let userScore = 0;
 let compScore = 0;
 
+// Choices
 const choices = ["Rock", "Paper", "Scissors"];
 
-// New code below using DOM manipulation
+// DOM Manipulation below
 
 // Target button element
 const buttons = document.querySelectorAll("button");
 
+// Runs through each button when clicked
 buttons.forEach(function(button) {
-    button.addEventListener("click", () => {
-        console.log(button.textContent);
-    })
     button.addEventListener("click", game);
 });
