@@ -70,19 +70,9 @@ function game(e) {
 
 }
 
-// New code below using DOM manipulation
-
 const choices = ["Rock", "Paper", "Scissors"];
 
-// Loops through each choice in choices and creates a button. Alternatively, a for loop can be used.
-// choices.forEach(function(choice) {
-//     let button = document.createElement("BUTTON");
-//     let buttonText = document.createTextNode(choice);
-//     button.setAttribute("class", "playerChoice");
-//     button.setAttribute("id", choice);
-//     button.appendChild(buttonText);
-//     document.body.appendChild(button);
-// })
+// New code below using DOM manipulation
 
 // Target button element
 const buttons = document.querySelectorAll("button");
