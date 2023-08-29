@@ -32,16 +32,18 @@ function gameRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+function game(e) {
 
+    // User & comp scores
     let userScore = 0;
     let compScore = 0;
 
+    // User & comp choices
     let computerChoice = getComputerChoice();
-    const playerChoice = Array.from(buttons); // Fix this!
+    // playerChoice stores textContent of button clicked
+    let playerChoice = e.target.textContent; 
 
-    console.log(playerChoice);
-    
+    // Convert choices to lower case
     playerChoice = playerChoice.toLowerCase();
     computerChoice = computerChoice.toLowerCase();
     
@@ -82,13 +84,12 @@ const choices = ["Rock", "Paper", "Scissors"];
 //     document.body.appendChild(button);
 // })
 
-// Targets all buttons
-const buttons = document.querySelectorAll("BUTTON");
+// Target button element
+const buttons = document.querySelectorAll("button");
 
-// Adds event listener to each button
 buttons.forEach(function(button) {
-    button.addEventListener("click", (e) => {
-        console.log(e.target.textContent);
+    button.addEventListener("click", () => {
+        console.log(button.textContent);
     })
     button.addEventListener("click", game);
 })
