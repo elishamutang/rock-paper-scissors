@@ -47,6 +47,9 @@ function game(e) {
     
     let result = gameRound(playerChoice, computerChoice);
 
+    // Target scoreboard div
+    let scores = document.getElementById("scoreboard");
+
     if(userScore < 5 && compScore < 5) {
         if (result == "You win!") {
             userScore++;
