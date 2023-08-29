@@ -47,25 +47,28 @@ function game(e) {
     
     let result = gameRound(playerChoice, computerChoice);
 
-    if (result == "You win!") {
-        userScore++;
-        console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-    } else if (result == "Computer wins") {
-        compScore++;
-        console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-    } else if (result == "It's a Tie!") {
-        console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
-    }
-
-    // Announces the winner after game ends
-    if(userScore > compScore) {
-        return "Game over: You beat the computer!";
-    } else if(compScore > userScore) {
-        return "Game over: Computer beats you!";
+    if(userScore < 5 && compScore < 5) {
+        if (result == "You win!") {
+            userScore++;
+            console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+        } else if (result == "Computer wins") {
+            compScore++;
+            console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+        } else {
+            console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+        }
     } else {
-        return "Game over: It's a tie! No one wins!";
+        if(userScore > compScore) {
+            console.log(`"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}"`);
+            console.log("You beat the computer!");
+        } else {
+            console.log(`"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}"`);
+            console.log("Computer beats you!");
+        }
+        userScore = 0;
+        compScore = 0;
+        return;
     }
-
 }
 
 let userScore = 0;
@@ -83,8 +86,4 @@ buttons.forEach(function(button) {
         console.log(button.textContent);
     })
     button.addEventListener("click", game);
-})
-
-
-
-
+});
