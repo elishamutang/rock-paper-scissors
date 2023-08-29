@@ -25,7 +25,7 @@ body {
 #scoreboard {
     border: 2px solid black;
     border-radius: 10px;
-    width: 400px;
+    width: 600px;
     height: 200px;
     margin: auto;
     text-align: center;
@@ -61,7 +61,7 @@ body {
 #title {
     margin: 0;
     align-self: center;
-    font-size: 35px;
+    font-size: 32px;
     color: blueviolet;
 }
 
