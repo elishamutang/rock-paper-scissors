@@ -23,11 +23,13 @@ body {
 }
 
 #scoreboard {
-    border: 2px solid red;
-    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
     height: 200px;
     margin: auto;
     text-align: center;
+    background-color: sandybrown;
 }
 
 .items {
@@ -40,4 +42,10 @@ body {
 
 #heading2, #title {
     margin: 20px auto;
+}
+
+#scoreboard h2 {
+    color: black;
+    font-size: 32px;
+    margin-top: 0;
 }
