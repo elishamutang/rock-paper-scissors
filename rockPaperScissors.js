@@ -4,6 +4,7 @@ function getComputerChoice() {
     return randomChoice;
 } 
 
+// Determines the winner of each round
 function gameRound(playerSelection, computerSelection) {
 
     // Visualize user input vs computer choice
@@ -32,11 +33,8 @@ function gameRound(playerSelection, computerSelection) {
     }
 }
 
+// Game
 function game(e) {
-
-    // User & comp scores
-    let userScore = 0;
-    let compScore = 0;
 
     // User & comp choices
     let computerChoice = getComputerChoice();
@@ -69,6 +67,9 @@ function game(e) {
     }
 
 }
+
+let userScore = 0;
+let compScore = 0;
 
 const choices = ["Rock", "Paper", "Scissors"];
 
