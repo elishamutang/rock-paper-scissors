@@ -47,21 +47,15 @@ function game(e) {
     
     let result = gameRound(playerChoice, computerChoice);
 
-    // Target scoreboard div
-    let scores = document.getElementById("scoreboard");
-    // Creates running score
-    let scoreText = document.createElement("h2");
-
     if(userScore < 5 && compScore < 5) {
         if (result == "You win!") {
             userScore++;
             scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
-            scores.appendChild(scoreText);
         } else if (result == "Computer wins") {
             compScore++;
-            console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+            scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
         } else {
-            console.log(`\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`);
+            scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
         }
     } else {
         if(userScore > compScore) {
@@ -93,3 +87,11 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach(function(button) {
     button.addEventListener("click", game);
 });
+
+// Target scoreboard div
+let scores = document.getElementById("scoreboard");
+
+// Create new h2 element to display running score
+let scoreText = document.createElement("h2");
+scoreText.id = "running-score";
+scores.appendChild(scoreText);
