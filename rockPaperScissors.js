@@ -39,7 +39,7 @@ function game(e) {
     // User & comp choices
     let computerChoice = getComputerChoice();
     // playerChoice stores textContent of button clicked
-    let playerChoice = e.target.textContent; 
+    let playerChoice = e.target.id; 
 
     // Convert choices to lower case
     playerChoice = playerChoice.toLowerCase();
@@ -59,8 +59,10 @@ function game(e) {
         }
     } else {
         if(userScore > compScore) {
+            alert("You won!")
             scoreText.textContent = `"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}\n\nYou beat the machine!"`;
         } else {
+            alert("Machine won :/")
             scoreText.textContent = `"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}\n\nMachine beats you!"`;
         }
         userScore = 0;
@@ -94,7 +96,8 @@ let scoreText = document.createElement("h2");
 scoreText.id = "running-score";
 scores.appendChild(scoreText);
 
-// Embeds image to button (ON-HOLD)
-// document.getElementById("rock").innerHTML = "<img src=rocks.png>";
-// document.getElementById("paper").innerHTML = "<img src=contract.png>";
-// document.getElementById("scissors").innerHTML = "<img src=scissor.png>";
+// Embeds image to buttons
+
+document.getElementById("Rock").innerHTML = "<img id='rock' src=rocks.png>";
+document.getElementById("Paper").innerHTML = "<img id='paper' src=contract.png>";
+document.getElementById("Scissors").innerHTML = "<img id='scissors' src=scissor.png>";
