@@ -94,7 +94,7 @@ let scoreText = document.createElement("h2");
 scoreText.id = "running-score";
 scores.appendChild(scoreText);
 
-// Embeds image to button
-document.getElementById("rock").innerHTML = "<img src=rocks.png>";
-document.getElementById("paper").innerHTML = "<img src=contract.png>";
-document.getElementById("scissors").innerHTML = "<img src=scissor.png>";
+// Embeds image to button (ON-HOLD)
+// document.getElementById("rock").innerHTML = "<img src=rocks.png>";
+// document.getElementById("paper").innerHTML = "<img src=contract.png>";
+// document.getElementById("scissors").innerHTML = "<img src=scissor.png>";
