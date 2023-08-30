@@ -79,7 +79,7 @@ const choices = ["Rock", "Paper", "Scissors"];
 // DOM Manipulation below
 
 // Target button element
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".items");
 
 // Runs game function for whatever button that was clicked
 buttons.forEach(function(button) {
