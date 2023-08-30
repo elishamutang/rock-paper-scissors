@@ -10,16 +10,15 @@ body {
 }
 
 #selection {
-    background-color: grey;
-    width: 500px;
+    width: 800px;
     height: 200px;
     margin: 50px auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 2px solid black;
     flex-shrink: 0;
     flex-wrap: wrap;
+    border: 2px solid red;
 }
 
 #scoreboard {
@@ -37,7 +36,7 @@ body {
     background-color: coral;
     padding: 15px 32px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 32px;
 }
 
 #scoreboard h2 {
@@ -47,13 +46,12 @@ body {
 }
 
 #header {
-    border: 10px double blueviolet;
-    border-radius: 5px;
+    /* border: 2px solid red; */
     width: 500px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 20px auto;
+    margin: 10px auto 0 auto;
     padding: 20px;
     /* background-color: seagreen; */
 }
@@ -62,7 +60,7 @@ body {
     margin: 0;
     align-self: center;
     font-size: 32px;
-    color: blueviolet;
+    color: black;
 }
 
 #heading2 {
@@ -73,4 +71,11 @@ body {
 img {
     width: 85px;
     /* border: 2px solid red; */
+}
+
+p {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-style: italic;
+    font-size: 14px;
 }
