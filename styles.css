@@ -26,7 +26,7 @@ body {
 #scoreboard {
     border-radius: 30px;
     width: 500px;
-    height: 220px;
+    height: 240px;
     margin: auto;
     text-align: center;
     background-color: sandybrown;
@@ -74,7 +74,6 @@ body {
 
 img {
     width: 85px;
-    /* border: 2px solid red; */
 }
 
 p {

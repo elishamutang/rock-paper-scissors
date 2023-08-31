@@ -60,10 +60,10 @@ function game(e) {
     } else {
         if(userScore > compScore) {
             alert("You won!")
-            scoreText.textContent = `Game over!\r\nFinal Score\r\n[U]: ${userScore}  [C]: ${compScore}\r\nYou beat the machine!`;
+            scoreText.textContent = `Game over! Final Score\r\n\r\n[U]: ${userScore}  [C]: ${compScore}\r\n\r\nYou beat the machine!`;
         } else {
             alert("Machine won :/")
-            scoreText.textContent = `Game over!\r\nFinal Score\r\n[U]: ${userScore}  [C]: ${compScore}\r\nMachine beats you!`;
+            scoreText.textContent = `Game over! Final Score\r\n\r\n[U]: ${userScore}  [C]: ${compScore}\r\n\r\nMachine beats you!`;
         }
         userScore = 0;
         compScore = 0;
