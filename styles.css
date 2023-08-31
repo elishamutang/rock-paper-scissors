@@ -77,18 +77,3 @@ p {
     font-style: italic;
     font-size: 14px;
 }
-
-#start {
-    margin: 0 auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    font-weight: bold;
-    text-decoration: none;
-}
