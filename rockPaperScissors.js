@@ -84,9 +84,9 @@ const choices = ["Rock", "Paper", "Scissors"];
 const buttons = document.querySelectorAll(".items");
 
 // Embeds image to buttons
-document.getElementById("Rock").innerHTML = "<img id='rock' src=rocks.png>";
-document.getElementById("Paper").innerHTML = "<img id='paper' src=contract.png>";
-document.getElementById("Scissors").innerHTML = "<img id='scissors' src=scissor.png>";
+document.getElementById("Rock").innerHTML = "<img id='rock' src=../images/rocks.png>";
+document.getElementById("Paper").innerHTML = "<img id='paper' src=../images/contract.png>";
+document.getElementById("Scissors").innerHTML = "<img id='scissors' src=../images/scissor.png>";
 
 // Runs game function for whatever button that was clicked
 buttons.forEach(function(button) {
