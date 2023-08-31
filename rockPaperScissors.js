@@ -60,10 +60,10 @@ function game(e) {
     } else {
         if(userScore > compScore) {
             alert("You won!")
-            scoreText.textContent = `Game over! Final Score\r\n\r\n[U]: ${userScore}  [C]: ${compScore}\r\n\r\nYou beat the machine!`;
+            scoreText.textContent = `Game over! Final Score\r\n[U]: ${userScore}  [C]: ${compScore}\r\n\r\nYou beat the machine!`;
         } else {
             alert("Machine won :/")
-            scoreText.textContent = `Game over! Final Score\r\n\r\n[U]: ${userScore}  [C]: ${compScore}\r\n\r\nMachine beats you!`;
+            scoreText.textContent = `Game over! Final Score\r\n[U]: ${userScore}  [C]: ${compScore}\r\n\r\nMachine beats you!`;
         }
         userScore = 0;
         compScore = 0;
@@ -100,5 +100,6 @@ let scores = document.getElementById("scoreboard");
 let scoreText = document.createElement("h2");
 scoreText.id = "running-score";
 scoreText.setAttribute("style", "white-space: pre;");
+scoreText.style.color = "black";
 scores.appendChild(scoreText);
 
