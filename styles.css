@@ -6,7 +6,7 @@ body {
     width: 1000px;
     margin: auto;
     flex: 0;
-    /* border: 2px solid red; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #selection {
@@ -24,13 +24,13 @@ body {
 }
 
 #scoreboard {
-    border: 5px dashed wheat;
     border-radius: 30px;
     width: 500px;
     height: 200px;
     margin: auto;
     text-align: center;
     background-color: sandybrown;
+    letter-spacing: 5px;
 }
 
 .items {
