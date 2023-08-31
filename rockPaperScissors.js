@@ -49,11 +49,11 @@ function game(e) {
 
     if(userScore < 5 && compScore < 5) {
         if (result == "You win!") {
+            scoreText.textContent = `${result}\r\nYour score: ${userScore}\r\nComputer score: ${compScore}`;
             userScore++;
-            scoreText.textContent = `${result}\r\nYour score: ${userScore}\r\nComputer score: ${compScore}`;
         } else if (result == "Computer wins") {
-            compScore++;
             scoreText.textContent = `${result}\r\nYour score: ${userScore}\r\nComputer score: ${compScore}`;
+            compScore++;
         } else {
             scoreText.textContent = `${result}\r\nYour score: ${userScore}\r\nComputer score: ${compScore}`;
         }
