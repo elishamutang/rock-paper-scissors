@@ -50,20 +50,20 @@ function game(e) {
     if(userScore < 5 && compScore < 5) {
         if (result == "You win!") {
             userScore++;
-            scoreText.textContent = `${result}Your score: ${userScore}Computer score: ${compScore}`;
+            scoreText.textContent = `${result}\r\nYour score: ${userScore}\r\nComputer score: ${compScore}`;
         } else if (result == "Computer wins") {
             compScore++;
-            scoreText.textContent = `${result}Your score: ${userScore}Computer score: ${compScore}`;
+            scoreText.textContent = `${result}\r\nYour score: ${userScore}\r\nComputer score: ${compScore}`;
         } else {
-            scoreText.textContent = `${result}Your score: ${userScore}Computer score: ${compScore}`;
+            scoreText.textContent = `${result}\r\nYour score: ${userScore}\r\nComputer score: ${compScore}`;
         }
     } else {
         if(userScore > compScore) {
             alert("You won!")
-            scoreText.textContent = `"Game over!Final Score[U]: ${userScore}[C]: ${compScore}You beat the machine!"`;
+            scoreText.textContent = `Game over!\r\nFinal Score\r\n[U]: ${userScore}  [C]: ${compScore}\r\nYou beat the machine!`;
         } else {
             alert("Machine won :/")
-            scoreText.textContent = `"Game over!Final Score[U]: ${userScore}[C]: ${compScore}Machine beats you!"`;
+            scoreText.textContent = `Game over!\r\nFinal Score\r\n[U]: ${userScore}  [C]: ${compScore}\r\nMachine beats you!`;
         }
         userScore = 0;
         compScore = 0;
@@ -99,5 +99,6 @@ let scores = document.getElementById("scoreboard");
 // Create new h2 element to display running score
 let scoreText = document.createElement("h2");
 scoreText.id = "running-score";
+scoreText.setAttribute("style", "white-space: pre;");
 scores.appendChild(scoreText);
 
