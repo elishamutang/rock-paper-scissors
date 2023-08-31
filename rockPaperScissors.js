@@ -83,6 +83,12 @@ const choices = ["Rock", "Paper", "Scissors"];
 // Target button element
 const buttons = document.querySelectorAll(".items");
 
+// Embeds image to buttons
+
+document.getElementById("Rock").innerHTML = "<img id='rock' src=rocks.png>";
+document.getElementById("Paper").innerHTML = "<img id='paper' src=contract.png>";
+document.getElementById("Scissors").innerHTML = "<img id='scissors' src=scissor.png>";
+
 // Runs game function for whatever button that was clicked
 buttons.forEach(function(button) {
     button.addEventListener("click", game);
@@ -96,8 +102,3 @@ let scoreText = document.createElement("h2");
 scoreText.id = "running-score";
 scores.appendChild(scoreText);
 
-// Embeds image to buttons
-
-document.getElementById("Rock").innerHTML = "<img id='rock' src=rocks.png>";
-document.getElementById("Paper").innerHTML = "<img id='paper' src=contract.png>";
-document.getElementById("Scissors").innerHTML = "<img id='scissors' src=scissor.png>";
