@@ -26,7 +26,7 @@ body {
 #scoreboard {
     border-radius: 30px;
     width: 500px;
-    height: 200px;
+    height: 220px;
     margin: auto;
     text-align: center;
     background-color: sandybrown;
@@ -40,6 +40,12 @@ body {
     padding: 30px 32px;
     text-decoration: none;
     font-size: 32px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.items:hover {
+    opacity: 1;
 }
 
 #scoreboard h2:first-child {
