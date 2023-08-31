@@ -50,20 +50,20 @@ function game(e) {
     if(userScore < 5 && compScore < 5) {
         if (result == "You win!") {
             userScore++;
-            scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
+            scoreText.textContent = `${result}Your score: ${userScore}Computer score: ${compScore}`;
         } else if (result == "Computer wins") {
             compScore++;
-            scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
+            scoreText.textContent = `${result}Your score: ${userScore}Computer score: ${compScore}`;
         } else {
-            scoreText.textContent = `\n\n${result}\n\n\nYour score: ${userScore}\nComputer score: ${compScore}`;
+            scoreText.textContent = `${result}Your score: ${userScore}Computer score: ${compScore}`;
         }
     } else {
         if(userScore > compScore) {
             alert("You won!")
-            scoreText.textContent = `"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}\n\nYou beat the machine!"`;
+            scoreText.textContent = `"Game over!Final Score[U]: ${userScore}[C]: ${compScore}You beat the machine!"`;
         } else {
             alert("Machine won :/")
-            scoreText.textContent = `"Game over!\nFinal Score\n[U]: ${userScore}\n[C]: ${compScore}\n\nMachine beats you!"`;
+            scoreText.textContent = `"Game over!Final Score[U]: ${userScore}[C]: ${compScore}Machine beats you!"`;
         }
         userScore = 0;
         compScore = 0;
@@ -84,7 +84,6 @@ const choices = ["Rock", "Paper", "Scissors"];
 const buttons = document.querySelectorAll(".items");
 
 // Embeds image to buttons
-
 document.getElementById("Rock").innerHTML = "<img id='rock' src=rocks.png>";
 document.getElementById("Paper").innerHTML = "<img id='paper' src=contract.png>";
 document.getElementById("Scissors").innerHTML = "<img id='scissors' src=scissor.png>";
